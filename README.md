@@ -4,10 +4,10 @@
 
 Elimden geldiğince yalın bir yapı kurguladım:
 
-    * Bu bir "Study Case" olduğu için hazır bir kütüphane yerine, kendi servis katmanımı ve hook yapımı kurarak altyapıyı manuel yönettim.
-    * Projenin ölçeği "Prop Drilling" sorunu yaratacak büyüklükte değil. Global state yönetimi eklemek over-engineering olacaktı. State'i lokal tutarak performansı artırdım ve karmaşıklığı düşürdüm.
-    * Salt CRUD işlemleri için Service Pattern yeterli ve daha okunaklı özellikle case kapsamında. CQRS gibi karmaşık bir pattern, bu ölçekteki bir projede kod takibini zorlaştırmaktan başka bir işe yaramayacaktı bu yüzden ekstradan onu uygulamadım.
-    * Arayüzü olabildiğince basit tuttum gidip jiraya da benzetebilirdik ama önemli olan studycase içinde de belirtildiği üzere teknik kısım olduğundan eforu tasarımdan ziyade teknik kısma ayırdım.
+Bu bir "Study Case" olduğu için hazır bir kütüphane yerine, kendi servis katmanımı ve hook yapımı kurarak altyapıyı manuel yönettim.
+Projenin ölçeği "Prop Drilling" sorunu yaratacak büyüklükte değil. Global state yönetimi eklemek over-engineering olacaktı. State'i lokal tutarak performansı artırdım ve karmaşıklığı düşürdüm.
+Salt CRUD işlemleri için Service Pattern yeterli ve daha okunaklı özellikle case kapsamında. CQRS gibi karmaşık bir pattern, bu ölçekteki bir projede kod takibini zorlaştırmaktan başka bir işe yaramayacaktı bu yüzden ekstradan onu uygulamadım.
+Arayüzü olabildiğince basit tuttum gidip jiraya da benzetebilirdik ama önemli olan studycase içinde de belirtildiği üzere teknik kısım olduğundan eforu tasarımdan ziyade teknik kısma ayırdım.
 
 
 
