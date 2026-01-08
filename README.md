@@ -16,19 +16,18 @@ Kod incelendiğinde görülecek talep edilen standart yapıların yanı sıra, o
 * **Docker & Docker Compose:** Tek komutla tüm ortamın (DB + API + UI) ayağa kalkması.
 * **Auto-Migration:** Konteyner başladığında veritabanı tablolarının otomatik oluşturulması.
 * **Soft Delete:** Verilerin fiziksel silinmemesi, `IsDeleted` flag'i ile yönetilmesi.
-* **Health Checks:** Sistemin durumunu izleyen `/health` endpoint'i.
 
 ---
 
 ## Docker ile çalıştırabilirsiniz. Servis yapılanması mevcut.
 
 
-1.  **Projeyi indirin:**
+1.  **Projeyi indirip:**
     ```bash
-    git clone https://github.com/AlpTaskManager.git
+    git clone https://github.com/dev-alp/alpTaskManager
     ```
 
-2.  **Tek Komutla Başlatın:**
+2.  **Tek Komutla Başlatabilirsiniz:**
     Terminali ana klasörde açıp şu komutu girin:
     ```bash
     docker-compose up --build
@@ -37,4 +36,3 @@ Kod incelendiğinde görülecek talep edilen standart yapıların yanı sıra, o
 **Adresler:**
 * **Uygulama:** http://localhost:5173
 * **API Swagger:** http://localhost:5062/swagger
-* **Health Check:** http://localhost:5062/health
