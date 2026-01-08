@@ -1,0 +1,31 @@
+# --- .NET Core ---
+bin/
+obj/
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userprefs
+
+# --- React / Node ---
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+.eslintcache
+
+# --- Docker & Environment ---
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+docker-compose.override.yml
+
+# --- Mac OS ---
+.DS_Store
+
+# --- Tests ---
+TestResults/

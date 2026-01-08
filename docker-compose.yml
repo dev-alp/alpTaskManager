@@ -1,0 +1,41 @@
+services:
+  db:
+    image: postgres:15
+    container_name: alptaskmanager_db
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "${DB_PORT}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
+
+  api:
+    build:
+      context: ./AlpTaskManager
+      dockerfile: AlpTaskManager.API/Dockerfile
+    container_name: alptaskmanager_api
+    depends_on:
+      - db
+    ports:
+      - "${API_PORT}:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=${DB_NAME};Username=${DB_USER};Password=${DB_PASSWORD}
+      - ASPNETCORE_ENVIRONMENT=Development
+    restart: on-failure
+
+  ui:
+    build:
+      context: ./AlpTaskManagerFrontend
+      dockerfile: Dockerfile
+    container_name: alptaskmanager_ui
+    ports:
+      - "${FRONTEND_PORT}:80"
+    depends_on:
+      - api
+    restart: on-failure
+
+volumes:
+  pgdata:
