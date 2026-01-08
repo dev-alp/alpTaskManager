@@ -74,7 +74,7 @@ export default function TaskListPage() {
         try {
             setTasks(prev => prev.filter(t => t.id !== selectedTaskId));
             await TaskService.delete(selectedTaskId);
-            toast.success('Görev başarıyla silindi 👋');
+            toast.success('Görev silme işlemi başarılı.');
             if (tasks.length === 1 && currentPage > 1) {
                 setCurrentPage(p => p - 1);
             } else {
@@ -82,7 +82,7 @@ export default function TaskListPage() {
             }
         } catch (error) {
             console.error(error);
-            toast.error("Silme işlemi başarısız oldu.");
+            toast.error("Görev silme işlemi başarısız.");
             loadTasks();
         }
     }, [selectedTaskId, tasks.length, currentPage, loadTasks]);
