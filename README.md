@@ -28,7 +28,6 @@ Kod incelendiğinde görülecek talep edilen standart yapıların yanı sıra, o
     ```
 
 2.  **Tek Komutla Başlatabilirsiniz**
-    Terminali ana klasörde açıp şu komutu girin:
     ```bash
     docker-compose up --build
     ```
