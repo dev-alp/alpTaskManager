@@ -22,12 +22,12 @@ Kod incelendiğinde görülecek talep edilen standart yapıların yanı sıra, o
 ## Docker ile çalıştırabilirsiniz. Servis yapılanması mevcut.
 
 
-1.  **Projeyi indirip:**
+1.  **Projeyi indirebilirsiniz**
     ```bash
     git clone https://github.com/dev-alp/alpTaskManager
     ```
 
-2.  **Tek Komutla Başlatabilirsiniz:**
+2.  **Tek Komutla Başlatabilirsiniz**
     Terminali ana klasörde açıp şu komutu girin:
     ```bash
     docker-compose up --build
